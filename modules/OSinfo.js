@@ -15,12 +15,12 @@ function getOSinfo() {
 		} else if (type === 'Linux') {
 			type = 'Linux';
 		}
-		console.log('System: ', type);
-		console.log('Release: ', release);
-		console.log('CPU model: ', cpu);
+		console.log('System: '.blue, type.bold);
+		console.log('Release: '.yellow, release.bold);
+		console.log('CPU model: '.green, cpu);
 		uptimeInfo.format();
-		console.log('User name: ', userInfo.username);
-		console.log('Home dir: ', userInfo.homedir);
+		console.log('User name: '.cyan, userInfo.username);
+		console.log('Home dir: '.grey, userInfo.homedir);
 	}
 
 exports.print = getOSinfo;
